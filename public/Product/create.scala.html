@@ -1,0 +1,31 @@
+
+
+	<section>
+
+		<div class="container">
+
+		
+			<div class="row">
+			
+				
+				<form novalidate class="simple-form">
+				
+				  <div class="form-group">
+					<label for="exampleInputEmail1">Product Name</label>
+					<input ng-model="prod.name" type="text" class="form-control" id="exampleInputEmail1" placeholder="Product Name"/>
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputPassword1">Product Description</label>
+					<textarea ng-model="prod.description" class="form-control" id="exampleInputPassword1" placeholder="Product Description"></textarea>
+				  </div>
+
+				  
+				  <button ng-click="create(prod)" class="btn btn-default">Create</button>
+				</form>
+				
+			
+			</div>
+		
+		</div>
+
+	</section>

@@ -1,0 +1,15 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+
+GET		/product/show/:id		controllers.ProductController.show(id: Long)
+GET		/product/list			controllers.ProductController.list()
+GET		/product/delete/:id		controllers.ProductController.delete(id: Long)
+
+POST	/product/create				controllers.ProductController.create()
+POST	/product/update/:id			controllers.ProductController.update(id: Long)
+
+
+# public assets js, css, img
+GET  /web/*file               controllers.Assets.at(path="/public", file)

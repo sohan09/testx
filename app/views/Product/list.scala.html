@@ -1,0 +1,43 @@
+@(list: List[Product])(u_name: String = "")
+@main(title = "Products")(user_name = "Hi " + u_name) {
+
+	<section>
+
+		<div class="container">
+		
+			<div class="row">
+			
+				
+				<table class="table table-striped table-bordered">
+					<thead>
+						
+						<tr><th>Product Name</th><th>Product Description</th></tr>
+					
+					</thead>
+					
+					<tbody>
+					
+					@for(prod <- list) {
+					
+						<tr>
+						
+							<td><a href="/product/show/@prod.getId()">@prod.getName()</a></td>
+							
+							<td>@prod.getDescription</td>
+						
+						</tr>
+					
+					}
+					
+					</tbody>
+				
+				</table>
+				
+			
+			</div>
+		
+		</div>
+
+	</section>
+
+}

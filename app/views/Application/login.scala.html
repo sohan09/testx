@@ -1,0 +1,52 @@
+@(clientId:String = "")(callbackUrl:String = "")(domain:String = "")(state:String = "")(error:String)
+
+@main(title = "Home")(user_name = "") {
+
+	<script src="/public/js/auth0-widget-5.js"></script>
+
+    <script type="text/javascript">
+
+      var widget = new Auth0Widget({
+        domain:         '@domain',
+        clientID:       '@clientId',
+        callbackURL:    '@callbackUrl'
+      });
+
+    </script>
+	
+	
+    
+    
+	<header id="top-section">
+	
+		<div class="jumbotron">
+		
+			<div class="container">
+			
+				<div class="row">
+				
+					<div class="text-left col-sm-12 col-lg-12 text-center">
+					
+						<h1></h1>
+						
+						<p class="lead"></p>
+					
+						<hr>
+					
+						<p class="text-center">
+						
+							<button onclick="widget.signin({scope: 'openid profile', state: '@state'})" class="btn btn-default btn-lg">Login</button>
+						
+						</p>
+					
+					</div>
+				
+				</div>
+			
+			</div>
+		
+		</div>
+	
+	</header>
+    
+}

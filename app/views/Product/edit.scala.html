@@ -1,0 +1,36 @@
+@(prod: Product)(u_name: String = "")
+@main(title = "Edit Product")(user_name = "Hi " + u_name) {
+
+	<section>
+
+		<div class="container">
+		
+			<div class="row">
+			
+				
+				<form role="form" method="POST" action="/product/update/@prod.getId()">
+				
+				  <div class="form-group">
+					<label for="exampleInputEmail1">Product Name</label>
+					<input type="text" class="form-control" id="exampleInputEmail1" placeholder="Product Name"
+						name="name"
+							value="@prod.getName()">
+				  </div>
+				  <div class="form-group">
+					<label for="exampleInputPassword1">Product Description</label>
+					<textarea class="form-control" id="exampleInputPassword1" placeholder="Product Description" name="description">@prod.getDescription()</textarea>
+				  </div>
+
+				  
+				  <button type="submit" class="btn btn-default">Update</button>
+				  
+				</form>
+				
+			
+			</div>
+		
+		</div>
+
+	</section>
+
+}
